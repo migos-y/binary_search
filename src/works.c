@@ -8,9 +8,7 @@ int p(int m){
   int a = 0;
   int count = 0;
   for(int i = 0;i < n;i++){
-    if(A[i] > m){
-      return 0;
-    }
+    if(A[i] > m) return 0;
 
     if(a + A[i] > m){
       a = A[i];
@@ -18,12 +16,9 @@ int p(int m){
     }else{
       a += A[i];
     }
+    if(count >= k) return 0;
   }
-  if(count >= k){
-    return 0;
-  }else{
-    return 1;
-  }
+  return 1;
 }
 
 int main(){
