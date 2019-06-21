@@ -13,9 +13,9 @@ int p(int m){ //mは袋の容量
       count += A[i] / m + 1;
     }
 
-    if(count > k) return 0;
+    if(count > k) return 0;//袋の大きさが足りないとき
   }
-  return 1;
+  return 1;//袋の大きさが足りているとき
 }
 
 int main(){

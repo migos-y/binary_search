@@ -4,7 +4,7 @@ int n;
 int k;
 int A[100000];
 
-int p(int m){
+int p(int m){//mは仕事量の最大値
   int a = 0;
   int count = 0;
   for(int i = 0;i < n;i++){
@@ -16,9 +16,9 @@ int p(int m){
     }else{
       a += A[i];
     }
-    if(count >= k) return 0;
+    if(count >= k) return 0;//最大値にならないとき
   }
-  return 1;
+  return 1;//最小値にならないとき
 }
 
 int main(){
