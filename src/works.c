@@ -8,7 +8,7 @@ int p(int m){//mは仕事量
   int a = 0;
   int count = 0;
   for(int i = 0;i < n;i++){
-    if(A[i] > m) return 0;
+    if(A[i] > m) return 0;//最大値にならないとき A[i]>mの時明らかに最大値でない
 
     if(a + A[i] > m){
       a = A[i];
