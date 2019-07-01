@@ -7,11 +7,8 @@ int A[100000];
 int p(int m){ //mは袋の容量
   int count = 0;
   for(int i = 0; i < n;i++){
-    if(A[i] % m == 0){
-      count += A[i] / m;
-    }else{
-      count += A[i] / m + 1;
-    }
+      count += (A[i] + m - 1) / m;
+    
 
     if(count > k) return 0;//袋の大きさが足りないとき
   }
